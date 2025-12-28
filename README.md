@@ -22,12 +22,12 @@ This repository is organized as a **multi-module Gradle project**.
 | Module | Description |
 |------|-------------|
 | `hw01-gradle` | Gradle basics and project setup |
-| `hw02-oop` | Object-Oriented Programming |
-| `hw03-collections` | Java Collections framework |
+| `hw02-logging` | Object-Oriented Programming |
+| `hw03-testing` | Java Collections framework |
 
 ---
 
-## ▶️ Build Instructions
+# ▶️ Build Instructions
 
 ### Build the entire project
 ```bash

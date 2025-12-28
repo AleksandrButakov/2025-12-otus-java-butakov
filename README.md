@@ -22,8 +22,9 @@ This repository is organized as a **multi-module Gradle project**.
 | Module | Description |
 |------|-------------|
 | `hw01-gradle` | Gradle basics and project setup |
-| `hw02-logging` | Object-Oriented Programming |
-| `hw03-testing` | Java Collections framework |
+| `hw02-logging` | Addition to gradle. Logging |
+| `hw03-testing` | QA and testing |
+| `hw04-algorithms` | Containers and algorithms |
 
 ---
 

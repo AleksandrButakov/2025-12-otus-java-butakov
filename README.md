@@ -4,7 +4,7 @@ This repository contains completed homework assignments for the
 **OTUS Java Developer** course.
 
 ## 👤 Author
-- Full name: Ivan Ivanov  
+- Full name: Aleksandr Butakov
 - Course: Java Developer  
 - Group: 2025-12  
 

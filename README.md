@@ -32,3 +32,13 @@ This repository is organized as a **multi-module Gradle project**.
 ### Build the entire project
 ```bash
 ./gradlew build
+
+Build a specific homework module
+./gradlew :hw01-gradle:build
+
+Run tests for a specific module
+./gradlew :hw01-gradle:test
+
+🛠 Requirements
+Java 21 or higher
+Gradle Wrapper (included)

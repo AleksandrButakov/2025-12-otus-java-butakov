@@ -27,7 +27,7 @@ This repository is organized as a **multi-module Gradle project**.
 
 ---
 
-# ▶️ Build Instructions
+### ▶️ Build Instructions
 
 ### Build the entire project
 ```bash

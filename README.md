@@ -1,14 +1,14 @@
-# OTUS Java Developer — Homework Repository
+## OTUS Java Developer — Homework Repository
 
 This repository contains completed homework assignments for the  
 **OTUS Java Developer** course.
 
-## 👤 Author
+### 👤 Author
 - Full name: Aleksandr Butakov
 - Course: Java Developer  
 - Group: 2025-12  
 
-## 🧱 Project Structure
+### 🧱 Project Structure
 This repository is organized as a **multi-module Gradle project**.
 
 - The root project contains shared Gradle configuration
@@ -17,7 +17,7 @@ This repository is organized as a **multi-module Gradle project**.
   - its own `build.gradle.kts`
   - a `README.md` describing the task and solution
 
-## 📂 Homework Modules
+### 📂 Homework Modules
 
 | Module | Description |
 |------|-------------|
@@ -25,8 +25,6 @@ This repository is organized as a **multi-module Gradle project**.
 | `hw02-logging` | Addition to gradle. Logging |
 | `hw03-testing` | QA and testing |
 | `hw04-algorithms` | Containers and algorithms |
-
----
 
 ### ▶️ Build Instructions
 
@@ -39,7 +37,8 @@ Build a specific homework module
 
 Run tests for a specific module
 ./gradlew :hw01-gradle:test
+```
 
-🛠 Requirements
-Java 21 or higher
-Gradle Wrapper (included)
+### 🛠 Requirements
+- Java 21 or higher
+- Gradle Wrapper (included)

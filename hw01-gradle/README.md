@@ -30,12 +30,12 @@ Build fat JAR
 ./gradlew :hw01-gradle:shadowJar
 
 Run fat JAR
-java -jar hw01-gradle/build/libs/hw01-gradle-1.0-SNAPSHOT.jar
+java -jar hw01-gradle/build/libs/gradleHelloWorld-0.1.jar
 ```
 
 ### 🛠 Technologies Used
 - Java 21
-- Gradle (Gradle Wrapper) 8.3
+- Gradle (Gradle Wrapper) 8.5
 - Google Guava
 
 ### ✅ Result

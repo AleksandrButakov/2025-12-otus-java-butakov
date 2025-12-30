@@ -10,7 +10,6 @@ public class HelloOtus {
     public static void main(String[] args) {
         String text = "Hello, OTUS!";
         String repeated = Strings.repeat(text + " ", 3);
-
         logger.info(repeated);
     }
 }

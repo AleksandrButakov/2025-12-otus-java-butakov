@@ -7,10 +7,10 @@ public class CustomerReverseOrder {
     private final Deque<Customer> customers = new ArrayDeque<>();
 
     public void add(Customer customer) {
-        customers.addLast(customer);
+        customers.push(customer);
     }
 
     public Customer take() {
-        return customers.removeLast();
+        return customers.poll();
     }
 }

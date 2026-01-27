@@ -29,6 +29,20 @@ ru.anbn.hw03.Main.java
 ```
 - The framework will automatically discover all annotated test methods, execute them, and print the results in the console.
 
+### 🧪 Test Run Example
+```java
+Starting test run for class: ru.anbn.hw03.SimpleTests
+Before test setup
+Test will fail now
+FAILED: failedTest
+After test cleanup
+Before test setup
+Test OK
+After test cleanup
+Test run finished
+Total tests: 2, Passed: 1, Failed: 1
+```
+
 ### 🛠 Technologies Used
 - Java 21
 - Gradle (Gradle Wrapper) 8.5

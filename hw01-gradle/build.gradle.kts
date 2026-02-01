@@ -7,8 +7,7 @@ plugins {
 dependencies {
     implementation("com.google.guava:guava")
     implementation("org.slf4j:slf4j-api")
-    runtimeOnly("ch.qos.logback:logback-classic")
-
+    implementation("ch.qos.logback:logback-classic")
 }
 
 tasks {

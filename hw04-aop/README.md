@@ -134,7 +134,7 @@ ASM / Instrumentation — more powerful, works at bytecode level, can handle any
 - Java 21
 - Gradle (Gradle Wrapper) 8.5
 - SLF4J + Logback
-- ASM 9.6
+- ASM 9.9.1
 
 ### ✅ Result
 - Automatic logging implemented using two approaches

@@ -1,5 +1,8 @@
 package ru.anbn.hw03.framework.runner;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.hw03.framework.annotations.After;
@@ -7,10 +10,6 @@ import ru.anbn.hw03.framework.annotations.Before;
 import ru.anbn.hw03.framework.annotations.Test;
 import ru.anbn.hw03.framework.runner.exception.TestInstantiationException;
 import ru.anbn.hw03.framework.runner.util.ReflectionUtils;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.List;
 
 public class TestRunner {
     private TestRunner() {

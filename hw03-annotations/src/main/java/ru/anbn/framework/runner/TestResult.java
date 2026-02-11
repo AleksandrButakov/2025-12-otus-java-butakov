@@ -1,4 +1,4 @@
-package ru.anbn.hw03.framework.runner;
+package ru.anbn.framework.runner;
 
 public class TestResult {
     private int total;

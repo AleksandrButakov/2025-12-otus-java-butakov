@@ -1,4 +1,4 @@
-package ru.anbn.hw02.homework;
+package ru.anbn;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 

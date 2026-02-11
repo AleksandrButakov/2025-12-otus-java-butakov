@@ -25,13 +25,13 @@ of the OTUS Java Developer course.
 - To run the tests, simply execute the `Main` class:
 
 ```java
-ru.anbn.hw03.Main.java
+ru.anbn.Main.java
 ```
 - The framework will automatically discover all annotated test methods, execute them, and print the results in the console.
 
 ### 🧪 Test Run Example
 ```java
-Starting test run for class: ru.anbn.hw03.SimpleTests
+Starting test run for class: ru.anbn.SimpleTests
 Before test setup
 Test will fail now
 FAILED: failedTest

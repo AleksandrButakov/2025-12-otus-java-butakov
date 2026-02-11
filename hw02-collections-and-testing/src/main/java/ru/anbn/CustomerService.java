@@ -1,4 +1,4 @@
-package ru.anbn.hw02.homework;
+package ru.anbn;
 
 import java.util.AbstractMap;
 import java.util.Comparator;

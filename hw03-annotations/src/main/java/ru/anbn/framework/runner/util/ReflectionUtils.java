@@ -1,4 +1,4 @@
-package ru.anbn.hw03.framework.runner.util;
+package ru.anbn.framework.runner.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

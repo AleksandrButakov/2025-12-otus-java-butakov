@@ -1,6 +1,6 @@
-package ru.anbn.hw03;
+package ru.anbn;
 
-import ru.anbn.hw03.framework.runner.TestRunner;
+import ru.anbn.framework.runner.TestRunner;
 
 public class Main {
     public static void main(String[] args) {

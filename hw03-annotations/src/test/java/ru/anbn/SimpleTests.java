@@ -1,10 +1,10 @@
-package ru.anbn.hw03;
+package ru.anbn;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.anbn.hw03.framework.annotations.After;
-import ru.anbn.hw03.framework.annotations.Before;
-import ru.anbn.hw03.framework.annotations.Test;
+import ru.anbn.framework.annotations.After;
+import ru.anbn.framework.annotations.Before;
+import ru.anbn.framework.annotations.Test;
 
 @SuppressWarnings("squid:S2187")
 public class SimpleTests {

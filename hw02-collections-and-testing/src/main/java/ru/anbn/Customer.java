@@ -1,4 +1,4 @@
-package ru.anbn.hw02.homework;
+package ru.anbn;
 
 public class Customer {
     private final long id;

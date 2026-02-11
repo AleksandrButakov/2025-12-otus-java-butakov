@@ -19,12 +19,12 @@ This repository is organized as a **multi-module Gradle project**.
 
 ### 📂 Homework Modules
 
-| Module | Description |
-|------|-------------|
-| `hw01-gradle` | Gradle basics and project setup |
-| `hw02-logging` | Addition to gradle. Logging |
-| `hw03-testing` | QA and testing |
-| `hw04-algorithms` | Containers and algorithms |
+| Module | Description                      |
+|----|----------------------------------|
+| `hw01-gradle` | Gradle basics and project setup  |
+| `hw02-collections-and-testing` | Using Collections. Unit Tests    |
+| `hw03-annotations` | Writing annotations              |
+| `hw04-aop` | Byte code, instrumentation, asm  |
 
 ### ▶️ Build Instructions
 

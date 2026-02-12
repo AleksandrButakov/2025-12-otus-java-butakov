@@ -25,6 +25,7 @@ This repository is organized as a **multi-module Gradle project**.
 | `hw02-collections-and-testing` | Using Collections. Unit Tests    |
 | `hw03-annotations` | Writing annotations              |
 | `hw04-aop` | Byte code, instrumentation, asm  |
+| `hw05-gc` | Heap optimization and performance experiments with minimal JVM heap |
 
 ### ▶️ Build Instructions
 

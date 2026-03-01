@@ -18,7 +18,7 @@ repositories {
 val asmVersion = "9.9.1"
 
 dependencies {
-    implementation("org.slf4j:slf4j-api")
+    implementation("org.slf4j:slf4j-model")
     implementation("ch.qos.logback:logback-classic")
     implementation("org.ow2.asm:asm:$asmVersion")
     implementation("org.ow2.asm:asm-commons:$asmVersion")

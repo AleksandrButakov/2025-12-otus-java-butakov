@@ -1,16 +1,15 @@
 package ru.anbn.atm.core;
 
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.atm.exception.InsufficientFundsException;
 import ru.anbn.atm.exception.UnsupportedDenominationException;
 import ru.anbn.atm.model.Banknote;
 import ru.anbn.atm.model.Cassette;
-
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class ATM {
     private static final Logger log = LoggerFactory.getLogger(ATM.class);

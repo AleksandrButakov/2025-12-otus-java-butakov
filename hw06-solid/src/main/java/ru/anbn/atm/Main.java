@@ -14,7 +14,6 @@ public class Main {
     public static void main(String[] args) {
         ATM atm = new ATM();
 
-        // Initialization of cassettes
         atm.addCassette(new CassetteImpl(Banknote.RUB_50, 10));
         atm.addCassette(new CassetteImpl(Banknote.RUB_5000, 10));
         atm.addCassette(new CassetteImpl(Banknote.RUB_1000, 50));
@@ -25,6 +24,7 @@ public class Main {
         withdrawCash(atm, 12550);
         withdrawCash(atm, 1550);
         withdrawCash(atm, 1100);
+        withdrawCash(atm, 200_000);
 
         depositCash(atm, Banknote.RUB_1000, 2);
         depositCash(atm, Banknote.RUB_500, 5);
@@ -36,6 +36,7 @@ public class Main {
             atm.withdrawCash(cash);
         } catch (InsufficientFundsException e) {
             log.warn("Операция снятия наличных отклонена: {}", e.getMessage());
+            log.info("Остаток после отклонения операции снятия наличных: {}", atm.getFullBalance());
         }
     }
 
@@ -45,6 +46,7 @@ public class Main {
             atm.depositCash(banknote, count);
         } catch (UnsupportedDenominationException e) {
             log.warn("Операция внесения наличных отклонена: {}", e.getMessage());
+            log.info("Остаток после отклонения попытки внесения наличных: {}", atm.getFullBalance());
         }
     }
 }

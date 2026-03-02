@@ -1,15 +1,16 @@
 package ru.anbn.atm.core;
 
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.atm.exception.InsufficientFundsException;
 import ru.anbn.atm.exception.UnsupportedDenominationException;
 import ru.anbn.atm.model.Banknote;
 import ru.anbn.atm.model.Cassette;
+
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class ATM {
     private static final Logger log = LoggerFactory.getLogger(ATM.class);
@@ -19,9 +20,9 @@ public class ATM {
         cassettes.put(cassette.getBanknote(), cassette);
     }
 
-    public void depositCash(Banknote banknote, int count) throws UnsupportedDenominationException {
+    public void depositCash(Banknote banknote, int count) {
         if (!cassettes.containsKey(banknote)) {
-            throw new UnsupportedDenominationException("Номинал не поддерживается");
+            throw new UnsupportedDenominationException("Номинал " + banknote + " не поддерживается");
         }
         cassettes.get(banknote).deposit(count);
 
@@ -29,17 +30,17 @@ public class ATM {
         log.info("Остаток после внесения: {}", getFullBalance());
     }
 
-    public void withdrawCash(int amount) throws InsufficientFundsException {
+    public void withdrawCash(int amount) {
         Map<Banknote, Integer> withdrawalPlan = new LinkedHashMap<>();
         int remaining = amount;
 
-        // Расчет наличия требуемого количества банкнот
+        // Check availability of the required banknotes
         for (Cassette cassette : cassettes.values()) {
             int denomValue = cassette.getBanknote().getValue();
             int needed = remaining / denomValue;
 
             if (needed > 0) {
-                // Берем сколько нужно или сколько есть в кассете
+                // Take the required amount or the available amount from the cassette
                 int toTake = Math.min(needed, cassette.getBalance() / denomValue);
                 if (toTake > 0) {
                     withdrawalPlan.put(cassette.getBanknote(), toTake);
@@ -52,7 +53,7 @@ public class ATM {
             throw new InsufficientFundsException("Невозможно выдать запрошенную сумму");
         }
 
-        // Если сумма набрана, физически уменьшаем остаток в кассетах
+        // If the requested sum is assembled, decrease the balance in the cassettes
         withdrawalPlan.forEach((denom, count) -> cassettes.get(denom).withdraw(count));
 
         log.info("Выдано: {}", withdrawalPlan);

@@ -20,9 +20,9 @@ of the OTUS Java Developer course.
 - Tests are self-contained and do not require any external library for execution.
 - Logging is implemented using SLF4J with Logback.
 
-### 🧪 How to Run
+``### 🧪 How to Run
 - All homework tests are executed using the custom test framework.
-- To run the tests, simply execute the `Main` class:
+- To run the tests, simply execute the `Main` class:``
 
 ```java
 ru.anbn.Main.java

@@ -6,6 +6,7 @@ include("hw04-aop")
 include("hw05-gc")
 include("hw06-solid")
 include("hw07-design-patterns")
+include("hw08-serialization")
 
 pluginManagement {
     val jgitver: String by settings

@@ -22,7 +22,7 @@ of the OTUS Java Developer course.
 
 ### 🧪 How to Run
 - All homework tests are executed using the custom test framework.
-- To run the tests, simply execute the `Main` class:
+- To run the tests, simply execute the `Main` class.
 
 ```java
 ru.anbn.Main.java

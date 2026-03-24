@@ -1,14 +1,17 @@
 package ru.anbn.handler;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.logging.Handler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.anbn.listener.Listener;
 import ru.anbn.model.Message;
 import ru.anbn.processor.Processor;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
 public class ComplexProcessor implements Handler {
+    private static final Logger logger = LoggerFactory.getLogger(ComplexProcessor.class);
 
     private final List<Listener> listeners = new ArrayList<>();
     private final List<Processor> processors;
@@ -48,7 +51,7 @@ public class ComplexProcessor implements Handler {
             try {
                 listener.onUpdated(msg);
             } catch (Exception ex) {
-                ex.printStackTrace();
+                logger.error("Error in listener", ex);
             }
         });
     }

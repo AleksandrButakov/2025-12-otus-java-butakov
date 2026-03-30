@@ -1,12 +1,11 @@
 package ru.anbn.listener.homework;
 
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+
+import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import ru.anbn.model.Message;
 import ru.anbn.model.ObjectForMessage;
-
-import java.util.ArrayList;
-
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 class HistoryListenerTest {
 

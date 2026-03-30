@@ -1,14 +1,13 @@
 package ru.anbn.handler;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.listener.Listener;
 import ru.anbn.model.Message;
 import ru.anbn.processor.Processor;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 
 public class ComplexProcessor implements Handler {
     private static final Logger logger = LoggerFactory.getLogger(ComplexProcessor.class);

@@ -1,17 +1,16 @@
 package ru.anbn.handler;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.anbn.listener.Listener;
 import ru.anbn.model.Message;
 import ru.anbn.processor.Processor;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.mockito.Mockito.*;
 
 class ComplexProcessorTest {
 
@@ -29,8 +28,7 @@ class ComplexProcessorTest {
 
         var processors = List.of(processor1, processor2);
 
-        var complexProcessor = new ComplexProcessor(processors, (Exception ex) -> {
-        });
+        var complexProcessor = new ComplexProcessor(processors, (Exception ex) -> {});
 
         // when
         var result = complexProcessor.handle(message);
@@ -75,8 +73,7 @@ class ComplexProcessorTest {
 
         var listener = mock(Listener.class);
 
-        var complexProcessor = new ComplexProcessor(new ArrayList<>(), (Exception ex) -> {
-        });
+        var complexProcessor = new ComplexProcessor(new ArrayList<>(), (Exception ex) -> {});
 
         complexProcessor.addListener(listener);
 

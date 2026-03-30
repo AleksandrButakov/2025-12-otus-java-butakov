@@ -1,8 +1,7 @@
 package ru.anbn.listener.homework;
 
-import ru.anbn.model.Message;
-
 import java.util.Optional;
+import ru.anbn.model.Message;
 
 public interface HistoryReader {
 

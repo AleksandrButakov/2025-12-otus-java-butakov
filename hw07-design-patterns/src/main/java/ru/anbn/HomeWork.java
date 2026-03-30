@@ -1,5 +1,6 @@
 package ru.anbn;
 
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.handler.ComplexProcessor;
@@ -8,8 +9,6 @@ import ru.anbn.listener.homework.HistoryListener;
 import ru.anbn.model.Message;
 import ru.anbn.model.ObjectForMessage;
 import ru.anbn.processor.*;
-
-import java.util.List;
 
 public class HomeWork {
     /*
@@ -36,7 +35,7 @@ public class HomeWork {
         var processors = List.of(
                 new ProcessorConcatFields(),
                 new SwapProcessor(),
-                new EvenSecondExceptionProcessor(),
+                new EvenSecondExceptionProcessor(new SystemDateTimeProvider()),
                 new LoggerProcessor(new ProcessorUpperField10()));
 
         // создаём ComplexProcessor с обработкой ошибок

@@ -1,11 +1,10 @@
 package ru.anbn.listener.homework;
 
-import ru.anbn.listener.Listener;
-import ru.anbn.model.Message;
-
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
+import ru.anbn.listener.Listener;
+import ru.anbn.model.Message;
 
 public class HistoryListener implements Listener, HistoryReader {
 

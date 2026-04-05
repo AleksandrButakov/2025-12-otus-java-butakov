@@ -1,0 +1,7 @@
+package ru.anbn.processor;
+
+import java.time.LocalDateTime;
+
+public interface DateTimeProvider {
+    LocalDateTime getDateTime();
+}

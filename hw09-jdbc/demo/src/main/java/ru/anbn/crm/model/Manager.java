@@ -4,29 +4,30 @@ import ru.anbn.crm.annotation.Id;
 
 public class Manager {
     @Id
-    private Long no;
+    private Long id;
 
     private String label;
     private String param1;
 
-    public Manager() {}
+    public Manager() {
+    }
 
     public Manager(String label) {
         this.label = label;
     }
 
-    public Manager(Long no, String label, String param1) {
-        this.no = no;
+    public Manager(Long id, String label, String param1) {
+        this.id = id;
         this.label = label;
         this.param1 = param1;
     }
 
     public Long getNo() {
-        return no;
+        return id;
     }
 
     public void setNo(Long no) {
-        this.no = no;
+        this.id = no;
     }
 
     public String getLabel() {
@@ -47,6 +48,6 @@ public class Manager {
 
     @Override
     public String toString() {
-        return "Manager{" + "no=" + no + ", label='" + label + '\'' + '}';
+        return "Manager{" + "no=" + id + ", label='" + label + '\'' + '}';
     }
 }

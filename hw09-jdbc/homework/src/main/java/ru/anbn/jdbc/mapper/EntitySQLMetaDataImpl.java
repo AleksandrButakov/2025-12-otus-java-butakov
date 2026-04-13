@@ -10,27 +10,38 @@ import java.util.stream.Collectors;
  */
 public class EntitySQLMetaDataImpl implements EntitySQLMetaData {
 
+    private final String selectAllSql;
+    private final String selectByIdSql;
+    private final String insertSql;
+    private final String updateSql;
+
+    private final String columnList;
+
     private final EntityClassMetaData<?> classMetaData;
 
     public EntitySQLMetaDataImpl(EntityClassMetaData<?> classMetaData) {
         this.classMetaData = classMetaData;
+
+        this.columnList =
+                classMetaData.getAllFields().stream().map(Field::getName).collect(Collectors.joining(", "));
+
+        this.selectAllSql = initSelectAllSql();
+        this.selectByIdSql = initSelectByIdSql();
+        this.insertSql = initInsertSql();
+        this.updateSql = initUpdateSql();
     }
 
-    @Override
-    public String getSelectAllSql() {
-        return "SELECT * FROM " + getTableName();
+    private String initSelectAllSql() {
+        return "SELECT " + columnList + " FROM " + getTableName();
     }
 
-    @Override
-    public String getSelectByIdSql() {
-        return "SELECT * FROM " + getTableName() + " WHERE " + getIdColumn() + " = ?";
+    private String initSelectByIdSql() {
+        return "SELECT " + columnList + " FROM " + getTableName() + " WHERE " + getIdColumn() + " = ?";
     }
 
-    @Override
-    public String getInsertSql() {
-        List<String> columns = classMetaData.getFieldsWithoutId().stream()
-                .map(Field::getName)
-                .toList();
+    private String initInsertSql() {
+        List<String> columns =
+                classMetaData.getFieldsWithoutId().stream().map(Field::getName).toList();
 
         String columnNames = String.join(", ", columns);
         String placeholders = columns.stream().map(c -> "?").collect(Collectors.joining(", "));
@@ -38,14 +49,32 @@ public class EntitySQLMetaDataImpl implements EntitySQLMetaData {
         return "INSERT INTO " + getTableName() + "(" + columnNames + ") VALUES(" + placeholders + ")";
     }
 
+    private String initUpdateSql() {
+        String setClause = classMetaData.getFieldsWithoutId().stream()
+                .map(f -> f.getName() + " = ?")
+                .collect(Collectors.joining(", "));
+
+        return "UPDATE " + getTableName() + " SET " + setClause + " WHERE " + getIdColumn() + " = ?";
+    }
+
+    @Override
+    public String getSelectAllSql() {
+        return selectAllSql;
+    }
+
+    @Override
+    public String getSelectByIdSql() {
+        return selectByIdSql;
+    }
+
+    @Override
+    public String getInsertSql() {
+        return insertSql;
+    }
+
     @Override
     public String getUpdateSql() {
-        List<String> setClauses = classMetaData.getFieldsWithoutId().stream()
-                .map(f -> f.getName() + " = ?")
-                .toList();
-
-        String setClause = String.join(", ", setClauses);
-        return "UPDATE " + getTableName() + " SET " + setClause + " WHERE " + getIdColumn() + " = ?";
+        return updateSql;
     }
 
     private String getTableName() {

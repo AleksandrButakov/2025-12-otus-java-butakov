@@ -70,7 +70,7 @@ ru/anbn/logging/demo/DemoProxy.java
 ./gradlew :hw04-aop:clean :hw04-aop:jar 
 
 2. Add VM Options:
--javaagent:/home/anbn/dev/learning/java/2025-12-otus-java-butakov/hw04-aop/build/libs/hw04-aop-1.0.jar 
+-javaagent:/home/anbn/dev/learning/java/2025-12-anbn-java-butakov/hw04-aop/build/libs/hw04-aop-1.0.jar 
 ````
 
 - To run the DemoAsm, simply execute the `Main` class:

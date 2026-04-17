@@ -10,7 +10,7 @@ plugins {
 }
 
 allprojects {
-    group = "ru.otus"
+    group = "ru.anbn"
 
     repositories {
         mavenLocal()

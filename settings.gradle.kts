@@ -7,6 +7,9 @@ include("hw05-gc")
 include("hw06-solid")
 include("hw07-design-patterns")
 include("hw08-serialization")
+include("hw09-jdbc")
+include("hw09-jdbc:demo")
+include("hw09-jdbc:homework")
 include("hw13-ioc")
 
 pluginManagement {

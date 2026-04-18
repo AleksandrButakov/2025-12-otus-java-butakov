@@ -14,6 +14,7 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
 
     public AppComponentsContainerImpl(Class<?>... configClasses) {
         try {
+            sortConfigClasses(configClasses);
             for (Class<?> configClass : configClasses) {
                 processConfig(configClass);
             }
@@ -54,6 +55,13 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         } catch (Exception e) {
             throw new IllegalStateException("Cannot create config instance: " + configClass.getName(), e);
         }
+    }
+
+    private void sortConfigClasses(Class<?>[] configClasses) {
+        Arrays.sort(configClasses, Comparator.comparingInt(c -> {
+            AppComponentsContainerConfig ann = c.getAnnotation(AppComponentsContainerConfig.class);
+            return ann == null ? 0 : ann.order();
+        }));
     }
 
     private Method[] getSortedMethods(Class<?> configClass) {

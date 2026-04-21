@@ -1,12 +1,11 @@
 package ru.anbn.jdbc.mapper;
 
-import ru.anbn.core.repository.DataTemplateException;
-import ru.anbn.crm.annotation.Id;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
+import ru.anbn.core.repository.DataTemplateException;
+import ru.anbn.crm.annotation.Id;
 
 public class EntityClassMetaDataImpl<T> implements EntityClassMetaData<T> {
 

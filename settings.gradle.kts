@@ -1,4 +1,4 @@
-rootProject.name = "2025-12-anbn-java-butakov"
+rootProject.name = "2025-12-otus-java-butakov"
 include("hw01-gradle")
 include("hw02-collections-and-testing")
 include("hw03-annotations")
@@ -10,6 +10,7 @@ include("hw08-serialization")
 include("hw09-jdbc")
 include("hw09-jdbc:demo")
 include("hw09-jdbc:homework")
+include("hw13-ioc")
 
 pluginManagement {
     val jgitver: String by settings

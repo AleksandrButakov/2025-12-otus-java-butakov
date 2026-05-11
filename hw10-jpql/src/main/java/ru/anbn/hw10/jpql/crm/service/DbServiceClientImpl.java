@@ -1,12 +1,13 @@
 package ru.anbn.hw10.jpql.crm.service;
 
-import java.util.List;
-import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.hw10.jpql.core.repository.DataTemplate;
 import ru.anbn.hw10.jpql.core.sessionmanager.TransactionManager;
 import ru.anbn.hw10.jpql.crm.model.Client;
+
+import java.util.List;
+import java.util.Optional;
 
 public class DbServiceClientImpl implements DBServiceClient {
     private static final Logger log = LoggerFactory.getLogger(DbServiceClientImpl.class);
@@ -22,13 +23,12 @@ public class DbServiceClientImpl implements DBServiceClient {
     @Override
     public Client saveClient(Client client) {
         return transactionManager.doInTransaction(session -> {
-            var clientCloned = client.clone();
             if (client.getId() == null) {
-                var savedClient = clientDataTemplate.insert(session, clientCloned);
-                log.info("created client: {}", clientCloned);
+                var savedClient = clientDataTemplate.insert(session, client);
+                log.info("created client: {}", client);
                 return savedClient;
             }
-            var savedClient = clientDataTemplate.update(session, clientCloned);
+            var savedClient = clientDataTemplate.update(session, client);
             log.info("updated client: {}", savedClient);
             return savedClient;
         });
@@ -50,5 +50,12 @@ public class DbServiceClientImpl implements DBServiceClient {
             log.info("clientList:{}", clientList);
             return clientList;
         });
+    }
+
+    public List<Client> findAllFull() {
+        return transactionManager.doInReadOnlyTransaction(session -> session.createQuery(
+                        "select distinct c from Client c " + "left join fetch c.address " + "left join fetch c.phones",
+                        Client.class)
+                .getResultList());
     }
 }

@@ -1,11 +1,10 @@
 package ru.anbn.hw13.ioc.appcontainer;
 
+import java.lang.reflect.Method;
+import java.util.*;
 import ru.anbn.hw13.ioc.appcontainer.api.AppComponent;
 import ru.anbn.hw13.ioc.appcontainer.api.AppComponentsContainer;
 import ru.anbn.hw13.ioc.appcontainer.api.AppComponentsContainerConfig;
-
-import java.lang.reflect.Method;
-import java.util.*;
 
 public class AppComponentsContainerImpl implements AppComponentsContainer {
 

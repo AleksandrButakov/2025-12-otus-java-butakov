@@ -45,9 +45,6 @@ public class Address {
         return client;
     }
 
-    /**
-     * ВАЖНО: без обратной логики
-     */
     public void setClient(Client client) {
         this.client = client;
     }

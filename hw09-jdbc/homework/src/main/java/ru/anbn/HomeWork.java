@@ -1,5 +1,6 @@
 package ru.anbn;
 
+import javax.sql.DataSource;
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,8 +14,6 @@ import ru.anbn.crm.service.DbServiceManagerImpl;
 import ru.anbn.jdbc.mapper.DataTemplateJdbc;
 import ru.anbn.jdbc.mapper.EntityClassMetaDataImpl;
 import ru.anbn.jdbc.mapper.EntitySQLMetaDataImpl;
-
-import javax.sql.DataSource;
 
 @SuppressWarnings({"java:S125", "java:S1481"})
 public class HomeWork {

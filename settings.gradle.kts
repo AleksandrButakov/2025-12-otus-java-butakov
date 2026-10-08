@@ -10,6 +10,7 @@ include("hw08-serialization")
 include("hw09-jdbc")
 include("hw09-jdbc:demo")
 include("hw09-jdbc:homework")
+include("hw10-jpql")
 include("hw13-ioc")
 
 pluginManagement {

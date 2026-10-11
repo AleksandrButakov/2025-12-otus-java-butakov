@@ -46,13 +46,13 @@ public class DbServiceDemo {
     }
 
     private static void flywayMigrations(DataSource dataSource) {
-        log.info("db migration started...");
+        log.info("db db.migration started...");
         var flyway = Flyway.configure()
                 .dataSource(dataSource)
-                .locations("classpath:/db/migration")
+                .locations("classpath:/db/db.migration")
                 .load();
         flyway.migrate();
-        log.info("db migration finished.");
+        log.info("db db.migration finished.");
         log.info("***");
     }
 }

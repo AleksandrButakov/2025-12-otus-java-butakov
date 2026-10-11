@@ -42,7 +42,7 @@ Database schema is managed by Flyway.\
 Migrations are executed automatically on application startup from:
 
 ```bash
-resources/db/migration
+resources/db/db.migration
 ```
 
 They create tables such as:

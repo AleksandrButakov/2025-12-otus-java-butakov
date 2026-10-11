@@ -55,14 +55,14 @@ public class JdbcDemo {
     }
 
     private static void flywayMigrations() {
-        logger.info("db migration started...");
+        logger.info("db db.migration started...");
         var flyway = Flyway.configure()
                 .dataSource(URL, USER, PASSWORD)
                 .schemas()
-                .locations("classpath:/db/migration")
+                .locations("classpath:/db/db.migration")
                 .load();
         flyway.migrate();
-        logger.info("db migration finished.");
+        logger.info("db db.migration finished.");
         logger.info("***");
     }
 }

@@ -12,13 +12,13 @@ public class MigrationsExecutorFlyway {
     public MigrationsExecutorFlyway(String dbUrl, String dbUserName, String dbPassword) {
         flyway = Flyway.configure()
                 .dataSource(dbUrl, dbUserName, dbPassword)
-                .locations("classpath:/db/migration")
+                .locations("classpath:/db/db.migration")
                 .load();
     }
 
     public void executeMigrations() {
-        logger.info("db migration started...");
+        logger.info("db db.migration started...");
         flyway.migrate();
-        logger.info("db migration finished.");
+        logger.info("db db.migration finished.");
     }
 }

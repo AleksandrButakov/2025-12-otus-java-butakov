@@ -1,13 +1,12 @@
 package ru.anbn.hw11.crm.service;
 
+import java.util.List;
+import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.anbn.hw11.core.repository.DataTemplate;
 import ru.anbn.hw11.core.sessionmanager.TransactionManager;
 import ru.anbn.hw11.crm.model.Client;
-
-import java.util.List;
-import java.util.Optional;
 
 public class DbServiceClientImpl implements DBServiceClient {
     private static final Logger log = LoggerFactory.getLogger(DbServiceClientImpl.class);

@@ -21,8 +21,7 @@ public class Address {
         this.id = id;
     }
 
-    public Address() {
-    }
+    public Address() {}
 
     public Address(Long id, String street) {
         this.id = id;

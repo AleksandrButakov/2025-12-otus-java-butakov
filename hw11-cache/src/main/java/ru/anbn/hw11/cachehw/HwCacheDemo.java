@@ -1,5 +1,6 @@
 package ru.anbn.hw11.cachehw;
 
+import java.util.Optional;
 import org.hibernate.cfg.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +13,6 @@ import ru.anbn.hw11.crm.model.Client;
 import ru.anbn.hw11.crm.model.Phone;
 import ru.anbn.hw11.crm.service.DBServiceClient;
 import ru.anbn.hw11.crm.service.DbServiceClientImpl;
-
-import java.util.Optional;
 
 public class HwCacheDemo {
     private static final Logger log = LoggerFactory.getLogger(HwCacheDemo.class);

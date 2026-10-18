@@ -1,8 +1,9 @@
 package ru.anbn.hw10.jpql.crm.service;
 
+import ru.anbn.hw10.jpql.crm.model.Client;
+
 import java.util.List;
 import java.util.Optional;
-import ru.anbn.hw10.jpql.crm.model.Client;
 
 public interface DBServiceClient {
 

@@ -1,9 +1,8 @@
 package ru.anbn.hw11.crm.service;
 
-import ru.anbn.hw11.crm.model.Client;
-
 import java.util.List;
 import java.util.Optional;
+import ru.anbn.hw11.crm.model.Client;
 
 public interface DBServiceClient {
 

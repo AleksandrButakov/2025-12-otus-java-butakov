@@ -1,5 +1,6 @@
 package ru.anbn.hw11.ehcache;
 
+import java.util.stream.IntStream;
 import org.ehcache.Cache;
 import org.ehcache.CacheManager;
 import org.ehcache.config.builders.CacheConfigurationBuilder;
@@ -9,8 +10,6 @@ import org.ehcache.config.builders.ResourcePoolsBuilder;
 import org.ehcache.event.EventType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.stream.IntStream;
 
 @SuppressWarnings({"java:S125", "java:S1144"})
 public class EhcacheDemo {

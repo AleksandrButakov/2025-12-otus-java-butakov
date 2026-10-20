@@ -3,7 +3,6 @@ package ru.anbn.hw12.webserver.web;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
-
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;

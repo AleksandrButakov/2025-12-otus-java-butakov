@@ -36,3 +36,4 @@ pluginManagement {
         id("com.diffplug.spotless") version spotless
     }
 }
+include("hw14-spring-data-jdbc")

@@ -5,15 +5,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import ru.anbn.hw12.webserver.crm.model.Address;
-import ru.anbn.hw12.webserver.crm.model.Client;
-import ru.anbn.hw12.webserver.crm.model.Phone;
-import ru.anbn.hw12.webserver.crm.service.DBServiceClient;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import ru.anbn.hw12.webserver.crm.model.Address;
+import ru.anbn.hw12.webserver.crm.model.Client;
+import ru.anbn.hw12.webserver.crm.model.Phone;
+import ru.anbn.hw12.webserver.crm.service.DBServiceClient;
 
 public class AdminServlet extends HttpServlet {
 
@@ -89,9 +88,9 @@ public class AdminServlet extends HttpServlet {
         dbServiceClient.saveClient(client);
 
         /*
-         Перенаправляем пользователя на GET /admin, чтобы предотвратить повторную отправку формы при обновлении
-         страницы F5
-         */
+        Перенаправляем пользователя на GET /admin, чтобы предотвратить повторную отправку формы при обновлении
+        страницы F5
+        */
         resp.sendRedirect("/admin");
     }
 }

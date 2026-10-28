@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5430/demoDB
+    username: usr
+    password: pwd
+    driver-class-name: org.postgresql.Driver
+
+  # Настройки Spring Data JDBC
+  data:
+    jdbc:
+      repositories:
+        enabled: true
+
+  # Включаем автоматический запуск Flyway при старте Spring Boot
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  # Настройки Thymeleaf (отключаем кэш для удобства разработки)
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+server:
+  port: 8080

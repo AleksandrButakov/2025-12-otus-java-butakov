@@ -37,3 +37,4 @@ pluginManagement {
     }
 }
 include("hw14-spring-data-jdbc")
+include("hw15-executors")

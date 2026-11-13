@@ -1,4 +1,4 @@
-## OTUS Java Developer — Homework Repository
+## Java Developer. Professional (OTUS) — Concurrency, JVM Internals & Architecture Labs
 
 This repository contains completed homework assignments for the  
 **OTUS Java Developer** course.

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ru.anbu.hw17.multiprocess.protobuf;
+
+option java_multiple_files = true;
+
+message NumberRequest {
+  int32 firstValue = 1;
+  int32 lastValue = 2;
+}
+
+message NumberResponse {
+  int32 value = 1;
+}
+
+service NumbersService {
+  rpc generateNumbers(NumberRequest) returns (stream NumberResponse);
+}

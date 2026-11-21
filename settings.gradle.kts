@@ -39,3 +39,4 @@ pluginManagement {
     }
 }
 include("hw16-queue")
+include("hw17-multiprocess")
